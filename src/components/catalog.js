@@ -2,6 +2,7 @@ import React from "react";
 import {useParams, Link} from "react-router-dom";
 import {useState, useEffect} from 'react';
 import { getThreads } from '../services/gets';
+// import {createThread } from './modals';
 
 function Catalog() {
     const [data, setData] = useState([]);
@@ -26,11 +27,18 @@ function Catalog() {
     return (
         <>
         {/* boad title/desc(unimplemented) */}
-            <div className=" flex border-box p-10 m-5 h-72 w-auto bg-indigo-600 text-white justify-start 
+            <div className=" flex flex-wrap border-box p-10 m-5 h-72 w-auto bg-indigo-600 text-white justify-start 
             items-center shadow-lg rounded-3xl ">
-                <div className="box-border px-20">
+                <div className="box-border px-20 w-1/2">
                     <h1 className="font-bold text-7xl box-border pb-4 mt-0">/{abbrev}/</h1>
                     <h2 className="font-regular text-3xl">All {abbrev}-related threads will appear here</h2>
+                </div>
+                <div className="box-border w-auto h-auto text-right w-1/2 pr-20 mx:pr-0">
+                    <button className="inline-flex items-center rounded-1xl bg-white h-2/5 flex flex-row justify-center p-4 pbutton">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>  <span className="ml-2">New Thread</span>
+                    </button>
                 </div>
             </div>
             {/* Replies */}
@@ -39,7 +47,7 @@ function Catalog() {
                     <div className="mx-auto flex flex-wrap w-full justify-center">
                     {data.map(threads => (
                      
-                          <figure className=" w-96 h-auto rounded-2xl m-5 shadow-2xl" key={threads.id}>
+                          <figure className=" w-96 h-auto rounded-2xl m-5 shadow-2xl flex-1" key={threads.id}>
                             <Link  to={`/${abbrev}/${threads.id}`}>
                                 <div className="w-full h-auto flex flex-rows bg-white rounded-t-2xl z-2">
                                     <div className="w-1/2 h-auto md:w-64 md:h-auto md:rounded-tl-2xl  thread-cover border-r border-indigo-200" style={{ 

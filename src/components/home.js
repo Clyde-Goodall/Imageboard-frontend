@@ -44,7 +44,7 @@ export default function Home()  {
                             <button
                             className="box-border m-3 w-72 bg-indigo-500 outline-none
                             rounded-md px-6 py-4 inline-flex items-center justify-center
-                            active:bg-indigo-600 active:inner-shadow">
+                            active:bg-indigo-600 active:inner-shadow h-auto">
                                 <span className="text-white font-semibold text-2xl" >
                                     /{boards.abbrev}/ 
                                 </span>  
@@ -57,6 +57,7 @@ export default function Home()  {
                     <p className="">Server is currently unreachable.</p></>}
                     </div>
                 </div>
+              
             </div>
             
         </>

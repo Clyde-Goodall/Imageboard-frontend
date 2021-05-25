@@ -6,6 +6,7 @@ import Home from './components/home';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Catalog from "./components/catalog";
 import Thread from "./components/thread";
+import Sidebar from './components/sidebar';
 
 function App() {
   // const [data, setData] = useState([]);
@@ -29,26 +30,32 @@ function App() {
 
   return (
     <>
-    <div className="subpixel-antialiased flex w-full box-border h-auto flex-col bg-gray-900  pb-96" >
-    <Router>
-      <Switch>
-        {/* Home page */}
-        <Route exact path="/">
-          <Home />
-        </Route>
-        {/* Board page */}
-        <Route  exact path="/:abbrev">
-          <Catalog/>
-        </Route>
-      {/* individual thread view */}
-        <Route  exact path="/:abbrev/:id">
-          <Thread/>
-        </Route>
-      </Switch>
-    </Router>
+     <Router>
+    <div className="flex subpixel-antialiased w-full overflow-hidden box-border h-screen  bg-gray-900 pb-96" >
+      <div className=" overflow-hidden hidden lg:block">
+        <Sidebar/>
+      </div>
+      <div className="col-span-3 overflow-y-auto flex-1 h-screen m-b-4">
+       
+          <Switch>
+            {/* Home page */}
+            <Route exact path="/">
+              <Home />
+            </Route>
+            {/* Board page */}
+            <Route  exact path="/:abbrev">
+              <Catalog/>
+            </Route>
+          {/* individual thread view */}
+            <Route  exact path="/:abbrev/:id">
+              <Thread/>
+            </Route>
+          </Switch>
+     
 
-    </div>
-    <div className="flex w-full h-screen box-border flex-col bg-gray-900 p-10 pb-96" ></div>
+        </div>
+        </div>
+      </Router>
     </>
   );
 }

@@ -63,8 +63,7 @@ function Thread() {
                                 </div>               
                             
                         </figure>
-                        
-                      
+                                      
                         ))}
 
                     <figure className=" w-auto h-auto rounded-2xl mx-5 shadow-2xl bg-white">
@@ -84,7 +83,7 @@ function Thread() {
                             className="bg-white w-48 text-lg font-semibold active:bg-gray-100 
                             text-indigo-500 shadow-md rounded-md h-1/2" name="op_img" accepts="image/png, image/jpg, image/jpeg, image/gif"/>
   
-                            <button >POST</button>
+                            <button className="pbutton">POST</button>
                             
                     </div>
                          

@@ -39,7 +39,7 @@ code {
   padding: 1rem;
 }
 
-button {
+.pbutton {
   @apply bg-white w-48 text-lg font-semibold active:bg-gray-100 
   text-indigo-500 shadow-md rounded-md h-1/2;
 }
