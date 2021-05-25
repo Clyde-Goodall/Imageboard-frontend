@@ -5,16 +5,16 @@ function Sidebar() {
     return(
             <>
                 
-                <div className="mx:w-auto h-full box-border p-4 w-96">
+                <div className="mx:w-auto h-screen bg-black box-border p-4 w-96 bg-opacity-20 border-r border-black border-opacity-10">
                     <Link to='/'>
                         <button 
-                        className="mb-5 bg-black bg-opacity-20 h-16 text-xl font-semibold text-gray-400 w-full font-1xl rounded-3xl shadow-smactive:bg-opacity-90">
+                        className="sidebar-button">
                             Home
                         </button>
                     </Link>
                     <a target="_" href="https://github.com/Clyde-Goodall/Imageboard-frontend">
                         <button 
-                        className="bg-black bg-opacity-20 h-16 text-xl font-semibold text-gray-400 w-full font-1xl rounded-3xl shadow-smactive:bg-opacity-90">
+                        className="sidebar-button">
                             Github
                         </button>
                         </a>

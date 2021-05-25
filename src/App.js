@@ -32,7 +32,7 @@ function App() {
     <>
      <Router>
     <div className="flex subpixel-antialiased w-full overflow-hidden box-border h-screen  bg-gray-900 pb-96" >
-      <div className=" overflow-hidden hidden lg:block">
+      <div className=" overflow-hidden hidden lg:block h-screen">
         <Sidebar/>
       </div>
       <div className="col-span-3 overflow-y-auto flex-1 h-screen m-b-4">

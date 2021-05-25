@@ -29,7 +29,7 @@ function Thread() {
             <div className="subpixel-antialiased flex border-box p-10 h-72 w-auto bg-indigo-600 text-white 
             justify-start items-center shadow-lg rounded-3xl m-5 ">
                 <div className="box-border px-20">
-                    <h1 className="font-bold text-7xl box-border pb-4 mt-0">/{abbrev}/</h1>
+                    <h1 className="htitle">/{abbrev}/</h1>
                     <h2 className="font-regular text-3xl">All {abbrev}-related threads will appear here</h2>
                 </div>
             </div>
