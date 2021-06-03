@@ -44,6 +44,15 @@ code {
   text-indigo-500 shadow-lg rounded-md h-1/2;
 }
 
+.cbutton {
+  @apply bg-red-500 w-48 text-lg font-semibold active:bg-gray-100 
+    text-white shadow-lg rounded-md h-1/2;
+}
+
+.cbutton:active {
+  @apply bg-red-600;
+}
+
 .catalog-button {
   @apply inline-flex items-center bg-white text-lg md:text-lg lg:text-xl h-4/5 flex flex-row justify-center p-4;
 }
